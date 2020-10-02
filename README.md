@@ -1,7 +1,6 @@
 # AudioSwitch
 
 ## [Скачать можно тут](https://github.com/AsahiOcean/AudioSwitch/releases)
-------------------------
 
 По сути это AppleScript для переключения аудиоустройства с помощью [switchaudio-osx](https://github.com/deweller/switchaudio-osx).
 
