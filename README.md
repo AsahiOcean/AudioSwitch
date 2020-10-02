@@ -1,8 +1,9 @@
 # AudioSwitch
 
-### [Версии программы здесь](https://github.com/AsahiOcean/AudioSwitch/releases)
+### [Скачать](https://github.com/AsahiOcean/AudioSwitch/releases)
+------------------------
 
-AppleScript для переключения аудиоустройства с помощью [switchaudio-osx](https://github.com/deweller/switchaudio-osx).
+По сути это AppleScript для переключения аудиоустройства с помощью [switchaudio-osx](https://github.com/deweller/switchaudio-osx).
 
 Установка [Homebrew](https://brew.sh/)
 ```
