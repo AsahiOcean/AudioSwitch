@@ -23,35 +23,10 @@ $ brew install switchaudio-osx
 
 ![](https://media.giphy.com/media/4MNWbJwivWcF7rqfAY/giphy.gif)
 
-3. Заменяем код на этот и сохраняем
+3. Заменяем код из файла по ссылке ниже и сохраняем
 
 ```
-set the current to (do shell script "/usr/local/Cellar/switchaudio-osx/*/SwitchAudioSource -c")
-
-on muteFunc()
-	set volume output volume 0
-	set volume with output muted
-	set volume input volume 0
-end muteFunc
-
-muteFunc()
-set vol to output volume of (get volume settings)
-set mic to input volume of (get volume settings)
-
-if {current, vol, mic} is equal to {"Внешние наушники", 0, 0} then
-	display notification "Громкость: output – " & (vol) & "%, input – " & (mic) & "% " with title "Режим без звука 🔕" subtitle "Наушники и микрофон приглушены"
-else
-	if current is equal to "Динамики «MacBook Pro»" then
-		set the devices to (do shell script "/usr/local/Cellar/switchaudio-osx/*/SwitchAudioSource -a")
-		if devices contains "Внешние наушники" then
-			do shell script "/usr/local/Cellar/switchaudio-osx/*/SwitchAudioSource -s \"Внешние наушники\""
-			set the headphones to (do shell script "/usr/local/Cellar/switchaudio-osx/*/SwitchAudioSource -c")
-			display notification "Громкость: output – " & (vol) & "%, input – " & (mic) & "%" with title "Переключение на «" & (headphones) & "»" subtitle "" & (headphones) & " приглушены"
-		else
-			display notification "Выход – " & (vol) & ", вход – " & (mic) & "" with title "Наушники не обнаружены ❌" subtitle "Громкость динамиков и микрофона приглушена"
-		end if
-	end if
-end if
+https://github.com/AsahiOcean/AudioSwitch/blob/master/source_code.scpt
 ```
 
 4. Добавляем в автозапуск и/или привязываем на горячую клавишу
